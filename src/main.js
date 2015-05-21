@@ -11,6 +11,7 @@ import FlashesService from './flashes/service';
 import IndexRouter from './index/router';
 import ColorsRouter from './colors/router';
 import BooksRouter from './books/router';
+import TrooksRouter from './trooks/router';
 
 let app = new Application();
 
@@ -42,6 +43,10 @@ app.colors = new ColorsRouter({
 });
 
 app.books = new BooksRouter({
+  container: app.layout.content
+});
+
+app.trooks = new TrooksRouter({
   container: app.layout.content
 });
 
